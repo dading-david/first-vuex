@@ -15,10 +15,14 @@
   export default {
     name: 'App',
     computed: {
-      ...mapState(['count']), //相当于get方法获取state中的count状态
+      ...mapState({
+        count: state => {
+          return state.app.count // 模块化后state后面会加上一个状态属性，标明是调用的哪一个模块的状态值
+        }
+      }), //相当于get方法获取state中的count状态
       ...mapGetters(['myCount']) //相当于get方法获取getters中的myCount方法
     }
-  }
+  };
 
 </script>
 
