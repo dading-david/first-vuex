@@ -10,7 +10,7 @@ const app = {
       return `current count is ${state.count}`
     }
   },
-  //通过mutations访问state中的全局状态,一般简单的状态改变逻辑卸载mutations里面
+  //通过mutations访问state中的全局状态,一般简单的状态改变逻辑写在mutations里面
   mutations: {
     //count+1
     //state是对上面state的应用

@@ -13,5 +13,6 @@ new Vue({
   router,
   components: { App },
   template: '<App/>',
+  router,
   store//让store与vue的实例进行关联,这样当前整个vue应用才能使用这个store
 })

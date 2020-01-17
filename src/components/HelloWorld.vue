@@ -25,7 +25,7 @@
       ...mapMutations(['INCREMENT', 'DECREMENT']), // 拿到mutations中的INCREMENT方法和DECREMENT方法
       ...mapActions(['myIncrease', 'myDecrease']), //拿到actions中的myIncrease方法和myDecrease方法
 
-      async increase() { // 在increase方法中调用INCREMENT方法
+      async increase() { // 在increase方法中调用INCREMENT方法,async表示异步
         //this.$store.commit('INCREMENT', 2) // mutations只能通过commit来调用
         this.INCREMENT(2) // 等价于this.$store.commit('INCREMENT')
         // this.$store.state.count++ // 虽然这样也能改变值，但是不推荐这样写（不能直接去改变state里面的状态，这样会丢失一些记录）
